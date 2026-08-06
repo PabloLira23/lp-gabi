@@ -128,7 +128,7 @@ const contactLinks = [
     label: 'Instagram',
     title: 'Conteúdos, rotina profissional e atualizações',
     action: 'Ver Instagram',
-    href: 'https://www.instagram.com/nutri.gabialencar?igsh=MTlweWN6dnZybmI4NA%3D%3D&utm_source=qr',
+    href: 'https://www.instagram.com/gabialencar.nutri',
     icon: '/instagram.png',
   },
   {
@@ -575,7 +575,7 @@ function App() {
                   Chamar no WhatsApp
                 </a>
                 <a
-                  href="https://www.instagram.com/nutri.gabialencar?igsh=MTlweWN6dnZybmI4NA%3D%3D&utm_source=qr"
+                  href="https://www.instagram.com/gabialencar.nutri"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-white/16 px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
