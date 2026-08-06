@@ -2,7 +2,12 @@ import heroPortrait from '../fotos/22-IMG_9233.jpg'
 import planningPortrait from '../fotos/78-IMG_9354.jpg'
 import lifestylePortrait from '../fotos/177-IMG_9530.jpg'
 
-const whatsappUrl = 'https://wa.me/5544997236151'
+const whatsappMessage = encodeURIComponent(
+  'Olá, Gabriela! Vim pelo site e gostaria de saber mais sobre o acompanhamento nutricional.',
+)
+const whatsappUrl = `https://wa.me/5544997236151?text=${whatsappMessage}`
+const instagramUrl = 'https://www.instagram.com/gabialencar.nutri'
+const tiktokUrl = 'https://www.tiktok.com/@nutri.gabialencar?_r=1&_t=ZS-95NN3jgeG7V'
 
 const phases = [
   {
@@ -128,23 +133,35 @@ const contactLinks = [
     label: 'Instagram',
     title: 'Conteúdos, rotina profissional e atualizações',
     action: 'Ver Instagram',
-    href: 'https://www.instagram.com/gabialencar.nutri',
+    href: instagramUrl,
     icon: '/instagram.png',
   },
   {
     label: 'TikTok',
     title: 'Vídeos curtos com dicas e bastidores',
     action: 'Ver TikTok',
-    href: 'https://www.tiktok.com/@nutri.gabialencar?_r=1&_t=ZS-95NN3jgeG7V',
+    href: tiktokUrl,
     icon: '/tiktok.png',
   },
 ]
 
 const metrics = [
-  'Emagrecimento',
-  'Hipertrofia',
-  'Reeducação alimentar',
-  'Melhora de performance',
+  {
+    label: 'Emagrecimento',
+    icon: '◔',
+  },
+  {
+    label: 'Hipertrofia',
+    icon: '✦',
+  },
+  {
+    label: 'Reeducação alimentar',
+    icon: '⌘',
+  },
+  {
+    label: 'Melhora de performance',
+    icon: '↗',
+  },
 ]
 
 function App() {
@@ -239,12 +256,14 @@ function App() {
                 <div className="mt-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
                   {metrics.map((item) => (
                     <div
-                      key={item}
+                      key={item.label}
                       className="rounded-[22px] border border-forest/8 bg-white/82 px-4 py-4 shadow-[0_10px_30px_rgba(31,53,46,0.06)] backdrop-blur"
                     >
-                      <div className="mb-3 h-9 w-9 rounded-full border border-forest/15" />
+                      <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full border border-forest/15 text-lg text-forest/80">
+                        {item.icon}
+                      </div>
                       <p className="text-sm font-semibold leading-6 text-forest">
-                        {item}
+                        {item.label}
                       </p>
                     </div>
                   ))}
@@ -252,7 +271,7 @@ function App() {
               </div>
 
               <div className="relative min-h-[700px]">
-                <div className="absolute inset-x-6 top-0 bottom-20 overflow-hidden rounded-[38px] bg-white p-3 shadow-[0_30px_90px_rgba(25,43,38,0.16)]">
+                <div className="absolute left-4 right-18 top-0 bottom-18 overflow-hidden rounded-[38px] bg-white p-3 shadow-[0_30px_90px_rgba(25,43,38,0.16)]">
                   <img
                     src={heroPortrait}
                     alt="Gabriela Alencar sorrindo em pé em seu consultório"
@@ -260,7 +279,7 @@ function App() {
                   />
                 </div>
 
-                <div className="absolute right-0 top-10 w-[44%] rounded-[30px] bg-forest p-5 text-white shadow-[0_28px_70px_rgba(15,31,27,0.28)]">
+                <div className="absolute right-0 top-8 w-[46%] rounded-[30px] bg-forest p-5 text-white shadow-[0_28px_70px_rgba(15,31,27,0.28)]">
                   <p className="text-[11px] font-extrabold uppercase tracking-[0.28em] text-white/62">
                     acompanhamento
                   </p>
@@ -272,7 +291,7 @@ function App() {
                   </p>
                 </div>
 
-                <div className="absolute bottom-0 left-0 w-[50%] rounded-[30px] bg-white/92 p-5 shadow-[0_20px_50px_rgba(25,43,38,0.10)] backdrop-blur">
+                <div className="absolute bottom-0 left-0 w-[56%] rounded-[30px] bg-white/92 p-5 shadow-[0_20px_50px_rgba(25,43,38,0.10)] backdrop-blur">
                   <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-forest/62">
                     método
                   </p>
@@ -282,11 +301,11 @@ function App() {
                   </p>
                 </div>
 
-                <div className="absolute bottom-10 right-6 h-[34%] w-[30%] overflow-hidden rounded-[28px] border-4 border-mist bg-white shadow-[0_24px_60px_rgba(25,43,38,0.14)]">
+                <div className="absolute bottom-8 right-4 h-[42%] w-[36%] overflow-hidden rounded-[28px] border-4 border-mist bg-white shadow-[0_24px_60px_rgba(25,43,38,0.14)]">
                   <img
                     src={lifestylePortrait}
                     alt="Gabriela Alencar sentada segurando uma xícara"
-                    className="h-full w-full object-cover object-top"
+                    className="h-full w-full object-cover object-center"
                   />
                 </div>
               </div>
@@ -294,15 +313,17 @@ function App() {
           </section>
 
           <section id="como-funciona" className="px-1 py-18 md:px-2 md:py-24">
-            <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
-              <div className="lg:sticky lg:top-28">
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.32em] text-forest/65">
-                  Como funciona
-                </p>
-                <h2 className="mt-4 max-w-lg font-display text-4xl leading-tight tracking-[-0.03em] text-forest md:text-5xl">
-                  Um acompanhamento que muda junto com a sua resposta corporal.
-                </h2>
-                <p className="mt-5 max-w-md leading-8 text-slate/82">
+            <div className="space-y-5">
+              <div className="grid gap-5 rounded-[34px] border border-white/60 bg-white/82 p-7 shadow-[0_24px_70px_rgba(28,46,41,0.07)] backdrop-blur md:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+                <div>
+                  <p className="text-[11px] font-extrabold uppercase tracking-[0.32em] text-forest/65">
+                    Como funciona
+                  </p>
+                  <h2 className="mt-4 max-w-lg font-display text-4xl leading-tight tracking-[-0.03em] text-forest md:text-5xl">
+                    Um acompanhamento que muda junto com a sua resposta corporal.
+                  </h2>
+                </div>
+                <p className="max-w-2xl leading-8 text-slate/82 lg:pt-2">
                   O processo tem ordem porque cada fase responde a uma pergunta
                   real: onde você está, como começar, quando ajustar e como
                   sustentar.
@@ -471,10 +492,10 @@ function App() {
               <div className="mt-8 flex flex-wrap gap-3">
                 {metrics.map((metric) => (
                   <span
-                    key={metric}
+                    key={metric.label}
                     className="rounded-full bg-forest px-4 py-2 text-sm font-bold text-white"
                   >
-                    {metric}
+                    {metric.label}
                   </span>
                 ))}
               </div>
@@ -575,7 +596,7 @@ function App() {
                   Chamar no WhatsApp
                 </a>
                 <a
-                  href="https://www.instagram.com/gabialencar.nutri"
+                  href={instagramUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-white/16 px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
