@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Sora", sans-serif;
+  --font-display: "Instrument Serif", serif;
+  --color-mist: #f3f5ef;
+  --color-forest: #18352f;
+  --color-deep-forest: #0e241f;
+  --color-slate: #44615a;
+  --color-mint: #9cd0b8;
+  --color-peach: #ffd7b7;
+  --color-peach-strong: #f1ae74;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(156, 208, 184, 0.22), transparent 26%),
+    radial-gradient(circle at bottom right, rgba(255, 215, 183, 0.24), transparent 24%),
+    linear-gradient(180deg, #edf2eb 0%, #f7f8f3 24%, #eef3ed 100%);
+  color: #44615a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+::selection {
+  background: rgba(156, 208, 184, 0.45);
+}
+
+.metabolic-grid {
+  background-image:
+    linear-gradient(rgba(24, 53, 47, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 53, 47, 0.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+  -webkit-mask-image: radial-gradient(circle at center, black 48%, transparent 100%);
+  mask-image: radial-gradient(circle at center, black 48%, transparent 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
