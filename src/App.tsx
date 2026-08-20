@@ -370,7 +370,7 @@ function App() {
             id="planos"
             className="relative overflow-hidden rounded-[42px] bg-forest px-6 py-16 text-white md:px-10 md:py-20"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(241,87,51,0.15),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(241,87,51,0.16),transparent_24%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(24,53,47,0.05),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(241,87,51,0.08),transparent_24%)]" />
             <div className="relative mx-auto max-w-3xl text-center">
               <p className="text-[11px] font-extrabold uppercase tracking-[0.32em] text-white/62">
                 Planos e serviços
