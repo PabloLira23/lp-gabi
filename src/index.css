@@ -4,8 +4,8 @@
   --font-sans: "Sora", sans-serif;
   --font-display: "Poppins", sans-serif;
   --color-mist: #fafaf9;
-  --color-forest: #333333;
-  --color-deep-forest: #1a1a1a;
+  --color-forest: #a0522d;
+  --color-deep-forest: #7d3f23;
   --color-slate: #666666;
   --color-mint: #f15733;
   --color-peach: #fff9f6;
@@ -48,8 +48,8 @@ a {
 
 .metabolic-grid {
   background-image:
-    linear-gradient(rgba(51, 51, 51, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(51, 51, 51, 0.02) 1px, transparent 1px);
+    linear-gradient(rgba(160, 82, 45, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(160, 82, 45, 0.02) 1px, transparent 1px);
   background-size: 36px 36px;
   -webkit-mask-image: radial-gradient(circle at center, black 48%, transparent 100%);
   mask-image: radial-gradient(circle at center, black 48%, transparent 100%);

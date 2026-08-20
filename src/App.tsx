@@ -168,7 +168,7 @@ function App() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-mist text-slate">
       <div className="mx-auto max-w-[1440px] px-4 py-4 sm:px-6 lg:px-8">
-        <header className="sticky top-4 z-40 rounded-[30px] border border-white/65 bg-white/80 px-5 py-4 shadow-[0_24px_60px_rgba(51,51,51,0.08)] backdrop-blur-xl md:px-8">
+        <header className="sticky top-4 z-40 rounded-[30px] border border-white/65 bg-white/80 px-5 py-4 shadow-[0_24px_60px_rgba(160,82,45,0.08)] backdrop-blur-xl md:px-8">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <a
               href="#inicio"
@@ -211,7 +211,7 @@ function App() {
         <main className="pb-20 pt-6 md:pb-28">
           <section
             id="inicio"
-            className="relative overflow-hidden rounded-[42px] border border-white/50 bg-white/70 px-6 py-8 shadow-[0_35px_120px_rgba(51,51,51,0.10)] md:px-10 md:py-10 lg:px-14 lg:py-14"
+            className="relative overflow-hidden rounded-[42px] border border-white/50 bg-white/70 px-6 py-8 shadow-[0_35px_120px_rgba(160,82,45,0.10)] md:px-10 md:py-10 lg:px-14 lg:py-14"
           >
             <div className="metabolic-grid pointer-events-none absolute inset-0 opacity-70" />
             <div className="absolute right-[-8%] top-[-10%] h-72 w-72 rounded-full bg-mint/35 blur-3xl" />
@@ -257,7 +257,7 @@ function App() {
                   {metrics.map((item) => (
                     <div
                       key={item.label}
-                      className="rounded-[22px] border border-forest/8 bg-white/82 px-4 py-4 shadow-[0_10px_30px_rgba(51,51,51,0.06)] backdrop-blur"
+                      className="rounded-[22px] border border-forest/8 bg-white/82 px-4 py-4 shadow-[0_10px_30px_rgba(160,82,45,0.06)] backdrop-blur"
                     >
                       <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full border border-forest/15 text-lg text-forest/80">
                         {item.icon}
@@ -271,7 +271,7 @@ function App() {
               </div>
 
               <div className="relative min-h-[700px]">
-                <div className="absolute left-4 right-18 top-0 bottom-18 overflow-hidden rounded-[38px] bg-white p-3 shadow-[0_30px_90px_rgba(51,51,51,0.12)]">
+                <div className="absolute left-4 right-18 top-0 bottom-18 overflow-hidden rounded-[38px] bg-white p-3 shadow-[0_30px_90px_rgba(160,82,45,0.12)]">
                   <img
                     src={heroPortrait}
                     alt="Gabriela Alencar sorrindo em pé em seu consultório"
@@ -291,7 +291,7 @@ function App() {
                   </p>
                 </div>
 
-                <div className="absolute bottom-0 left-0 w-[56%] rounded-[30px] bg-white/92 p-5 shadow-[0_20px_50px_rgba(51,51,51,0.10)] backdrop-blur">
+                <div className="absolute bottom-0 left-0 w-[56%] rounded-[30px] bg-white/92 p-5 shadow-[0_20px_50px_rgba(160,82,45,0.10)] backdrop-blur">
                   <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-forest/62">
                     método
                   </p>
@@ -370,7 +370,7 @@ function App() {
             id="planos"
             className="relative overflow-hidden rounded-[42px] bg-forest px-6 py-16 text-white md:px-10 md:py-20"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(51,51,51,0.03),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(241,87,51,0.05),transparent_24%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(160,82,45,0.03),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(241,87,51,0.05),transparent_24%)]" />
             <div className="relative mx-auto max-w-3xl text-center">
               <p className="text-[11px] font-extrabold uppercase tracking-[0.32em] text-white/62">
                 Planos e serviços
@@ -459,7 +459,7 @@ function App() {
             id="sobre"
             className="grid gap-6 px-1 py-18 md:px-2 md:py-24 lg:grid-cols-[1.02fr_0.98fr] lg:items-stretch"
           >
-            <div className="rounded-[38px] border border-white/60 bg-white/82 p-8 shadow-[0_28px_80px_rgba(51,51,51,0.07)] backdrop-blur md:p-10">
+            <div className="rounded-[38px] border border-white/60 bg-white/82 p-8 shadow-[0_28px_80px_rgba(160,82,45,0.07)] backdrop-blur md:p-10">
               <p className="text-[11px] font-extrabold uppercase tracking-[0.32em] text-forest/65">
                 Sobre mim
               </p>
@@ -494,7 +494,7 @@ function App() {
             </div>
 
             <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
-              <div className="overflow-hidden rounded-[38px] bg-white p-3 shadow-[0_28px_80px_rgba(51,51,51,0.10)] lg:row-span-2">
+              <div className="overflow-hidden rounded-[38px] bg-white p-3 shadow-[0_28px_80px_rgba(160,82,45,0.10)] lg:row-span-2">
                 <img
                   src={planningPortrait}
                   alt="Gabriela Alencar escrevendo anotações durante atendimento"
@@ -511,7 +511,7 @@ function App() {
                 </p>
               </div>
 
-              <div className="overflow-hidden rounded-[38px] bg-white p-3 shadow-[0_28px_70px_rgba(51,51,51,0.08)]">
+              <div className="overflow-hidden rounded-[38px] bg-white p-3 shadow-[0_28px_70px_rgba(160,82,45,0.08)]">
                 <img
                   src={lifestylePortrait}
                   alt="Gabriela Alencar em um retrato descontraído segurando uma xícara"
@@ -523,7 +523,7 @@ function App() {
 
           <section
             id="contato"
-            className="grid gap-6 rounded-[42px] border border-white/60 bg-white/82 px-6 py-10 shadow-[0_28px_80px_rgba(51,51,51,0.07)] backdrop-blur md:px-10 md:py-12 lg:grid-cols-[0.9fr_1.1fr]"
+            className="grid gap-6 rounded-[42px] border border-white/60 bg-white/82 px-6 py-10 shadow-[0_28px_80px_rgba(160,82,45,0.07)] backdrop-blur md:px-10 md:py-12 lg:grid-cols-[0.9fr_1.1fr]"
           >
             <div>
               <p className="text-[11px] font-extrabold uppercase tracking-[0.32em] text-forest/65">
@@ -537,7 +537,7 @@ function App() {
                 {contactLinks.map((contact) => (
                   <div
                     key={contact.label}
-                    className="rounded-[24px] border border-forest/10 bg-white/88 px-5 py-5 shadow-[0_12px_30px_rgba(51,51,51,0.05)]"
+                    className="rounded-[24px] border border-forest/10 bg-white/88 px-5 py-5 shadow-[0_12px_30px_rgba(160,82,45,0.05)]"
                   >
                     <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-forest/62">
                       {contact.label}
